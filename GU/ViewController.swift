@@ -18,7 +18,5 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor(red: 0.30, green: 0.47, blue: 0.64, alpha: 1.00)
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.00)]
     }
-
-
 }
 
