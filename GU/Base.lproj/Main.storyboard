@@ -20,16 +20,16 @@
                                 <rect key="frame" x="100" y="44" width="175" height="100"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Zf5-JL-YTu">
-                                <rect key="frame" x="16" y="160" width="343" height="176"/>
+                                <rect key="frame" x="16" y="160" width="343" height="166"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Yi3-t6-AGX">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="70"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ew-5w-ZHL">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="X3g-Tl-lV4"/>
-                                                    <constraint firstAttribute="width" constant="80" id="woU-Gq-Mld"/>
+                                                    <constraint firstAttribute="height" constant="70" id="X3g-Tl-lV4"/>
+                                                    <constraint firstAttribute="width" constant="70" id="woU-Gq-Mld"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Dark Pencil Icon"/>
                                                 <connections>
@@ -37,10 +37,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3v-6I-kOl">
-                                                <rect key="frame" x="87.5" y="0.0" width="80" height="80"/>
+                                                <rect key="frame" x="91" y="0.0" width="70" height="70"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="6jY-O0-PpT"/>
-                                                    <constraint firstAttribute="height" constant="80" id="Y2s-q3-n2r"/>
+                                                    <constraint firstAttribute="width" constant="70" id="6jY-O0-PpT"/>
+                                                    <constraint firstAttribute="height" constant="70" id="Y2s-q3-n2r"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Dark ZagWeb Icon"/>
                                                 <connections>
@@ -48,10 +48,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQv-cn-uxp">
-                                                <rect key="frame" x="175.5" y="0.0" width="80" height="80"/>
+                                                <rect key="frame" x="182" y="0.0" width="70" height="70"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="R1A-1A-4SJ"/>
-                                                    <constraint firstAttribute="width" constant="80" id="b0J-hi-Cp2"/>
+                                                    <constraint firstAttribute="height" constant="70" id="R1A-1A-4SJ"/>
+                                                    <constraint firstAttribute="width" constant="70" id="b0J-hi-Cp2"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Dark Outlook Icon"/>
                                                 <connections>
@@ -59,10 +59,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwq-Cj-8fD">
-                                                <rect key="frame" x="263" y="0.0" width="80" height="80"/>
+                                                <rect key="frame" x="273" y="0.0" width="70" height="70"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="HLj-vH-MVb"/>
-                                                    <constraint firstAttribute="height" constant="80" id="WGc-E9-0e0"/>
+                                                    <constraint firstAttribute="width" constant="70" id="HLj-vH-MVb"/>
+                                                    <constraint firstAttribute="height" constant="70" id="WGc-E9-0e0"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Dark AddClass Icon"/>
                                                 <connections>
@@ -72,10 +72,11 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="T0y-nV-Qz7">
-                                        <rect key="frame" x="0.0" y="96" width="343" height="80"/>
+                                        <rect key="frame" x="0.0" y="86" width="343" height="80"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fec-lc-JOu">
                                                 <rect key="frame" x="0.0" y="0.5" width="80" height="79"/>
+                                                <color key="tintColor" red="0.30196078430000001" green="0.47450980390000003" blue="0.63921568630000003" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="nj3-ZR-j0P"/>
                                                     <constraint firstAttribute="width" constant="80" id="ol2-aR-HCY"/>
@@ -83,6 +84,7 @@
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xpz-Bc-pjG">
                                                 <rect key="frame" x="87.5" y="0.5" width="80" height="79"/>
+                                                <color key="tintColor" red="0.30196078430000001" green="0.47450980390000003" blue="0.63921568630000003" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="NHG-Uw-5QQ"/>
                                                     <constraint firstAttribute="height" constant="80" id="j4r-ed-niJ"/>
@@ -90,6 +92,7 @@
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Lc5-Ni-51t">
                                                 <rect key="frame" x="175.5" y="0.5" width="80" height="79"/>
+                                                <color key="tintColor" red="0.30196078430000001" green="0.47450980390000003" blue="0.63921568630000003" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="8jT-z3-bss"/>
                                                     <constraint firstAttribute="width" constant="80" id="Eyd-9D-yQz"/>
@@ -97,6 +100,7 @@
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uvz-yX-Ahk">
                                                 <rect key="frame" x="263" y="0.5" width="80" height="79"/>
+                                                <color key="tintColor" red="0.30196078430000001" green="0.47450980390000003" blue="0.63921568630000003" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="B5E-7Z-uR7"/>
                                                     <constraint firstAttribute="height" constant="80" id="G1B-Pm-HiB"/>
