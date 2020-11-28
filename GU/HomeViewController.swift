@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  GU
 //
 //  Created by Nicole Bien on 11/27/20.
@@ -9,6 +9,8 @@
 //  OUTLOOK ICON
 //  SCHEDULE ADD
 //  <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+//  ZAGWEB ICON
+//  <div>Icons made by <a href="https://www.flaticon.com/authors/prosymbols" title="Prosymbols">Prosymbols</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 //
 
 import UIKit

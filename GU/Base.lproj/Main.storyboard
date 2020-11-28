@@ -11,7 +11,7 @@
         <!--GU Mobile-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="GU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,13 +36,17 @@
                                                     <segue destination="8Z1-Vw-s4r" kind="show" id="qrY-Sb-m0u"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZXR-qF-CPk">
-                                                <rect key="frame" x="87.5" y="0.5" width="80" height="79"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3v-6I-kOl">
+                                                <rect key="frame" x="87.5" y="0.0" width="80" height="80"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="OyL-Wh-xf9"/>
-                                                    <constraint firstAttribute="width" constant="80" id="sqh-Kc-pUx"/>
+                                                    <constraint firstAttribute="width" constant="80" id="6jY-O0-PpT"/>
+                                                    <constraint firstAttribute="height" constant="80" id="Y2s-q3-n2r"/>
                                                 </constraints>
-                                            </imageView>
+                                                <state key="normal" title="Button" image="Dark ZagWeb Icon"/>
+                                                <connections>
+                                                    <segue destination="JYv-Mn-btW" kind="show" id="Oy1-tb-ueu"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQv-cn-uxp">
                                                 <rect key="frame" x="175.5" y="0.0" width="80" height="80"/>
                                                 <constraints>
@@ -50,6 +54,9 @@
                                                     <constraint firstAttribute="width" constant="80" id="b0J-hi-Cp2"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Dark Outlook Icon"/>
+                                                <connections>
+                                                    <segue destination="tcI-eI-X4q" kind="show" id="tnf-Cl-tpC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwq-Cj-8fD">
                                                 <rect key="frame" x="263" y="0.0" width="80" height="80"/>
@@ -58,6 +65,9 @@
                                                     <constraint firstAttribute="height" constant="80" id="WGc-E9-0e0"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Dark AddClass Icon"/>
+                                                <connections>
+                                                    <segue destination="Gi7-zh-eJC" kind="show" id="h4A-5a-rGh"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -148,7 +158,7 @@
             </objects>
             <point key="canvasLocation" x="-197.10144927536234" y="69.642857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--BlackBoard-->
         <scene sceneID="3Pk-ca-bNx">
             <objects>
                 <viewController id="8Z1-Vw-s4r" sceneMemberID="viewController">
@@ -158,11 +168,59 @@
                         <viewLayoutGuide key="safeArea" id="q7F-i4-LSj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="pww-hx-YcT"/>
+                    <navigationItem key="navigationItem" title="BlackBoard" id="pww-hx-YcT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T2V-Gj-cat" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1522" y="-616"/>
+            <point key="canvasLocation" x="1452" y="-612"/>
+        </scene>
+        <!--ZagWeb-->
+        <scene sceneID="zZk-3H-Mu2">
+            <objects>
+                <viewController id="JYv-Mn-btW" customClass="ZagWebViewController" customModule="GU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="471-vt-N9O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="A9Q-B1-DGI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ZagWeb" id="qt6-yL-tHQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8D5-IE-8aZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2409" y="-612"/>
+        </scene>
+        <!--ZagMail-->
+        <scene sceneID="hyS-ik-e54">
+            <objects>
+                <viewController id="tcI-eI-X4q" customClass="EmailViewController" customModule="GU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="coh-aU-R2I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="i4R-bZ-clH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ZagMail" id="iHz-rr-a0e"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5HA-RG-zjT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3377" y="-612"/>
+        </scene>
+        <!--Add Classes-->
+        <scene sceneID="X5k-Dq-Jfj">
+            <objects>
+                <viewController id="Gi7-zh-eJC" customClass="AddClassViewController" customModule="GU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DZx-vo-mjG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qAt-DZ-6ee"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Classes" id="vaz-9v-ZPH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fJb-i1-mPd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4316" y="-612"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.7843137255" green="0.87058823529999996" blue="0.92941176469999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
@@ -170,6 +228,7 @@
         <image name="Dark AddClass Icon" width="500" height="500"/>
         <image name="Dark Outlook Icon" width="500" height="500"/>
         <image name="Dark Pencil Icon" width="500" height="500"/>
+        <image name="Dark ZagWeb Icon" width="500" height="500"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="gonzaga" width="436" height="100"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
