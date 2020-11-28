@@ -15,17 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guBulldog" translatesAutoresizingMaskIntoConstraints="NO" id="OZ2-9b-ifQ">
-                                <rect key="frame" x="16" y="60" width="382" height="820"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guLogo" translatesAutoresizingMaskIntoConstraints="NO" id="NJZ-Nv-sMb">
+                                <rect key="frame" x="20" y="60" width="374" height="752"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.015686274509803921" green="0.11764705882352941" blue="0.25882352941176467" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="OZ2-9b-ifQ" secondAttribute="bottom" constant="16" id="9Zt-Ws-4le"/>
-                            <constraint firstItem="OZ2-9b-ifQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="T41-aS-Hss"/>
-                            <constraint firstAttribute="trailing" secondItem="OZ2-9b-ifQ" secondAttribute="trailing" constant="16" id="jRb-g9-dAg"/>
-                            <constraint firstItem="OZ2-9b-ifQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lbD-iX-wn9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NJZ-Nv-sMb" secondAttribute="trailing" constant="20" id="0VZ-mj-Rhk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NJZ-Nv-sMb" secondAttribute="bottom" constant="50" id="Cmn-Dg-QkT"/>
+                            <constraint firstItem="NJZ-Nv-sMb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="ewW-w1-Ja1"/>
+                            <constraint firstItem="NJZ-Nv-sMb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zua-yk-zxT"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -35,6 +35,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="guBulldog" width="900" height="900"/>
+        <image name="guLogo" width="434" height="288"/>
     </resources>
 </document>
