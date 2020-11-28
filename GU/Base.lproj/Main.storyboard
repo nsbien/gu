@@ -7,18 +7,55 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Gonzaga University-->
+        <!--GU Mobile-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gonzaga" translatesAutoresizingMaskIntoConstraints="NO" id="86g-94-62r">
+                                <rect key="frame" x="100" y="88" width="214" height="100"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="HZS-XO-YvO">
+                                <rect key="frame" x="20" y="204" width="374" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZI-3m-7pG">
+                                        <rect key="frame" x="0.0" y="0.0" width="51.5" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzq-mJ-tf8">
+                                        <rect key="frame" x="107.5" y="0.0" width="51.5" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJO-yR-Gc5">
+                                        <rect key="frame" x="215" y="0.0" width="51.5" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNn-en-wVv">
+                                        <rect key="frame" x="322.5" y="0.0" width="51.5" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.30196078431372547" green="0.47450980392156861" blue="0.63921568627450975" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.30196078430000001" green="0.47450980390000003" blue="0.63921568630000003" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.7843137255" green="0.87058823529999996" blue="0.92941176469999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HZS-XO-YvO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2vZ-e1-Kab"/>
+                            <constraint firstItem="86g-94-62r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8XG-Pi-IZh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HZS-XO-YvO" secondAttribute="trailing" constant="20" id="HK3-Xd-kpa"/>
+                            <constraint firstItem="86g-94-62r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Ljr-5f-bDb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="86g-94-62r" secondAttribute="trailing" constant="100" id="eqC-cP-fTz"/>
+                            <constraint firstItem="HZS-XO-YvO" firstAttribute="top" secondItem="86g-94-62r" secondAttribute="bottom" constant="16" id="vfe-D1-EzU"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Gonzaga University" id="cCx-zB-aQG">
+                    <navigationItem key="navigationItem" title="GU Mobile" id="cCx-zB-aQG">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="thermometer.sun.fill" catalog="system" id="Jls-cg-bhX">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem title="Item" image="line.horizontal.3" catalog="system" id="B9a-ig-pA6">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -55,9 +92,11 @@
             <point key="canvasLocation" x="-197.10144927536234" y="69.642857142857139"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="0.015686274510000001" green="0.1176470588" blue="0.25882352939999997" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.7843137255" green="0.87058823529999996" blue="0.92941176469999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
     <resources>
+        <image name="gonzaga" width="436" height="100"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="thermometer.sun.fill" catalog="system" width="114" height="128"/>
     </resources>
 </document>
