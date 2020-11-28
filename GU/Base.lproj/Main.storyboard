@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,34 +25,40 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Yi3-t6-AGX">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ew-5w-ZHL">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="X3g-Tl-lV4"/>
+                                                    <constraint firstAttribute="width" constant="80" id="woU-Gq-Mld"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Dark Pencil Icon"/>
+                                                <connections>
+                                                    <segue destination="8Z1-Vw-s4r" kind="show" id="qrY-Sb-m0u"/>
+                                                </connections>
+                                            </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZXR-qF-CPk">
-                                                <rect key="frame" x="0.0" y="0.5" width="80" height="79"/>
+                                                <rect key="frame" x="87.5" y="0.5" width="80" height="79"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="OyL-Wh-xf9"/>
                                                     <constraint firstAttribute="width" constant="80" id="sqh-Kc-pUx"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EDX-9C-Cbj">
-                                                <rect key="frame" x="87.5" y="0.5" width="80" height="79"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQv-cn-uxp">
+                                                <rect key="frame" x="175.5" y="0.0" width="80" height="80"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="T5V-CE-2eF"/>
-                                                    <constraint firstAttribute="height" constant="80" id="g3J-8U-JmY"/>
+                                                    <constraint firstAttribute="height" constant="80" id="R1A-1A-4SJ"/>
+                                                    <constraint firstAttribute="width" constant="80" id="b0J-hi-Cp2"/>
                                                 </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eWt-NH-Spm">
-                                                <rect key="frame" x="175.5" y="0.5" width="80" height="79"/>
+                                                <state key="normal" title="Button" image="Dark Outlook Icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwq-Cj-8fD">
+                                                <rect key="frame" x="263" y="0.0" width="80" height="80"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="8yv-2S-upB"/>
-                                                    <constraint firstAttribute="height" constant="80" id="xcH-1z-bSL"/>
+                                                    <constraint firstAttribute="width" constant="80" id="HLj-vH-MVb"/>
+                                                    <constraint firstAttribute="height" constant="80" id="WGc-E9-0e0"/>
                                                 </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="l9B-Jb-RYQ">
-                                                <rect key="frame" x="263" y="0.5" width="80" height="79"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="8bM-z2-A6n"/>
-                                                    <constraint firstAttribute="height" constant="80" id="PCX-oC-0eG"/>
-                                                </constraints>
-                                            </imageView>
+                                                <state key="normal" title="Button" image="Dark AddClass Icon"/>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="T0y-nV-Qz7">
@@ -118,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="713.04347826086962" y="69.642857142857139"/>
+            <point key="canvasLocation" x="641" y="69"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fc0-6Y-tAf">
@@ -141,13 +148,35 @@
             </objects>
             <point key="canvasLocation" x="-197.10144927536234" y="69.642857142857139"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="3Pk-ca-bNx">
+            <objects>
+                <viewController id="8Z1-Vw-s4r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dCt-Ls-zSG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="q7F-i4-LSj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pww-hx-YcT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T2V-Gj-cat" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1522" y="-616"/>
+        </scene>
     </scenes>
     <color key="tintColor" red="0.7843137255" green="0.87058823529999996" blue="0.92941176469999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
     <resources>
+        <image name="Dark AddClass Icon" width="500" height="500"/>
+        <image name="Dark Outlook Icon" width="500" height="500"/>
+        <image name="Dark Pencil Icon" width="500" height="500"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="gonzaga" width="436" height="100"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="thermometer.sun.fill" catalog="system" width="114" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
