@@ -18,6 +18,7 @@
 		1E7C9AFA2571C3DF00FD2AF8 /* GU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C9AF82571C3DF00FD2AF8 /* GU.xcdatamodeld */; };
 		1E7C9AFC2571C3E200FD2AF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C9AFB2571C3E200FD2AF8 /* Assets.xcassets */; };
 		1E7C9AFF2571C3E200FD2AF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C9AFD2571C3E200FD2AF8 /* LaunchScreen.storyboard */; };
+		1EF8D1482576E7A8005D5319 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF8D1472576E7A8005D5319 /* Class.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		1E7C9AFB2571C3E200FD2AF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E7C9AFE2571C3E200FD2AF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E7C9B002571C3E200FD2AF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EF8D1472576E7A8005D5319 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				1E35FF5125722C3E000F2561 /* ZagWebViewController.swift */,
 				1E35FF4E25722C31000F2561 /* EmailViewController.swift */,
 				1E35FF5425722C50000F2561 /* AddClassViewController.swift */,
+				1EF8D1472576E7A8005D5319 /* Class.swift */,
 			);
 			path = GU;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				1E35FF5225722C3E000F2561 /* ZagWebViewController.swift in Sources */,
 				1E7C9AF42571C3DE00FD2AF8 /* HomeViewController.swift in Sources */,
 				1E35FF4F25722C31000F2561 /* EmailViewController.swift in Sources */,
+				1EF8D1482576E7A8005D5319 /* Class.swift in Sources */,
 				1E7C9AF02571C3DE00FD2AF8 /* AppDelegate.swift in Sources */,
 				1E7C9AF22571C3DE00FD2AF8 /* SceneDelegate.swift in Sources */,
 				1E35FF5525722C50000F2561 /* AddClassViewController.swift in Sources */,
