@@ -217,10 +217,84 @@
                     <view key="view" contentMode="scaleToFill" id="DZx-vo-mjG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bpj-Zw-OKx">
+                                <rect key="frame" x="16" y="60" width="343" height="547"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgj-BN-f34">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="255" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g3f-e0-PmB">
+                                        <rect key="frame" x="0.0" y="30.5" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="inputCourseName:" destination="Gi7-zh-eJC" eventType="editingDidEnd" id="dDh-cx-mEL"/>
+                                        </connections>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fm6-EP-BIa">
+                                        <rect key="frame" x="0.0" y="74.5" width="343" height="216"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4U-GH-bmQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="82" height="216"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="O3l-rU-Dei">
+                                                <rect key="frame" x="87" y="0.0" width="82" height="216"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="inputStartPicker:" destination="Gi7-zh-eJC" eventType="valueChanged" id="2Pn-Bx-TTV"/>
+                                                </connections>
+                                            </datePicker>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPa-aK-5vr">
+                                                <rect key="frame" x="174" y="0.0" width="82" height="216"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="zFg-be-etW">
+                                                <rect key="frame" x="261" y="0.0" width="82" height="216"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="inputEndPicker:" destination="Gi7-zh-eJC" eventType="valueChanged" id="YCz-AN-K4q"/>
+                                                    <action selector="inputStartPicker:" destination="Gi7-zh-eJC" eventType="valueChanged" id="hB6-e6-db0"/>
+                                                </connections>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p40-gg-A7p">
+                                        <rect key="frame" x="0.0" y="300.5" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUo-bn-hpH">
+                                        <rect key="frame" x="0.0" y="331" width="343" height="216"/>
+                                    </pickerView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qAt-DZ-6ee"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bpj-Zw-OKx" firstAttribute="top" secondItem="qAt-DZ-6ee" secondAttribute="top" constant="16" id="1ga-qL-UdV"/>
+                            <constraint firstItem="bpj-Zw-OKx" firstAttribute="leading" secondItem="qAt-DZ-6ee" secondAttribute="leading" constant="16" id="SYQ-6K-KsJ"/>
+                            <constraint firstItem="qAt-DZ-6ee" firstAttribute="trailing" secondItem="bpj-Zw-OKx" secondAttribute="trailing" constant="16" id="exS-8R-GOh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Classes" id="vaz-9v-ZPH"/>
+                    <connections>
+                        <outlet property="courseName" destination="Bgj-BN-f34" id="oq0-RB-4rU"/>
+                        <outlet property="endTIme" destination="qPa-aK-5vr" id="teP-UE-UNw"/>
+                        <outlet property="startTime" destination="m4U-GH-bmQ" id="IM7-eX-sdk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJb-i1-mPd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
