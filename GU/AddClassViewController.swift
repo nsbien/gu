@@ -17,7 +17,7 @@ class AddClassViewController: UIViewController {
     }
     @IBOutlet weak var endTIme: UILabel!
     @IBAction func inputEndPicker(_ sender: Any) {
-    }
+    }  
     
      
     override func viewDidLoad() {
