@@ -27,11 +27,34 @@ class HomeViewController: UIViewController {
         let center = UNUserNotificationCenter.current()
         let options: UNAuthorizationOptions = [.alert, .sound]
         
-        center.requestAuthorization(options: options) { (granted, error) in
-            if !granted {
-                print("Something went wrong")
-            }
-        }
+        center.getNotificationSettings { (settings) in
+             if settings.authorizationStatus != .authorized {
+                center.requestAuthorization(options: options) { (granted, error) in
+                    if !granted {
+                        print("Something went wrong")
+                    }
+                }
+             }
+         }
+        //for _ in classList {
+        //temp date
+            let date = Date(timeIntervalSinceNow: 10)
+            let content = UNMutableNotificationContent()
+            content.title = "Don't forget"
+            content.body = "Buy some milk"
+            content.sound = UNNotificationSound.default
+            let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute, .second], from: date)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
+            let identifier = "UYLLocalNotification"
+            let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+            center.add(request, withCompletionHandler: { (error) in
+                if error != nil {
+                 // Something went wrong
+             }
+         })
+        //}
+        
     }
+
 }
 
