@@ -22,7 +22,8 @@ class AddClassViewController: UIViewController {
      
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        HomeViewController().createNotifications(usingClass: <#T##Class#>)
+        // Do any additional setup after loading the view.
     }
     
 

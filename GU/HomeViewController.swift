@@ -11,7 +11,8 @@
 //  <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 //  ZAGWEB ICON
 //  <div>Icons made by <a href="https://www.flaticon.com/authors/prosymbols" title="Prosymbols">Prosymbols</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-//
+//  CLASS LIST ICON
+//  https://www.flaticon.com/authors/pixel-perfect
 
 import UIKit
 import UserNotifications
@@ -27,11 +28,41 @@ class HomeViewController: UIViewController {
         let center = UNUserNotificationCenter.current()
         let options: UNAuthorizationOptions = [.alert, .sound]
         
-        center.requestAuthorization(options: options) { (granted, error) in
-            if !granted {
-                print("Something went wrong")
-            }
-        }
+        center.getNotificationSettings { (settings) in
+             if settings.authorizationStatus != .authorized {
+                center.requestAuthorization(options: options) { (granted, error) in
+                    if !granted {
+                        print("Something went wrong")
+                    }
+                }
+             }
+         }
+        //for _ in classList {
+        //temp date
+            let date = Date(timeIntervalSinceNow: 10)
+            
+            
+        //}
+        
     }
+    
+    func createNotifications(usingClass class: Class) {
+        let content = UNMutableNotificationContent()
+        //content.title = "Class \(class.name)"
+        //content.body = "At: \(class.location)"
+        content.sound = UNNotificationSound.default
+        //for date in class.dayList {
+            let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute], from: date)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
+            let identifier = "UYLLocalNotification"
+            let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+            self.center.add(request, withCompletionHandler: { (error) in
+                if error != nil {
+                 // Something went wrong
+             }
+         })
+        //}
+    }
+
 }
 

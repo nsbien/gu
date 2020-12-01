@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RrO-43-NlH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RrO-43-NlH">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="100" y="44" width="175" height="100"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Zf5-JL-YTu">
-                                <rect key="frame" x="16" y="160" width="343" height="166"/>
+                                <rect key="frame" x="16" y="160" width="343" height="338"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Yi3-t6-AGX">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="70"/>
@@ -71,8 +71,82 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nok-Dz-7vy">
+                                        <rect key="frame" x="0.0" y="86" width="343" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvS-QO-d5r">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="Dkj-Ig-lcw"/>
+                                                    <constraint firstAttribute="height" constant="70" id="RTQ-q3-1VU"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Dark Pencil Icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iN-HW-vVG">
+                                                <rect key="frame" x="91" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="A9z-0S-kRk"/>
+                                                    <constraint firstAttribute="height" constant="70" id="BlF-0m-0v3"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Dark ZagWeb Icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cm0-Nx-mdD">
+                                                <rect key="frame" x="182" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="JS5-sP-qCA"/>
+                                                    <constraint firstAttribute="height" constant="70" id="gBR-8l-iyX"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Dark Outlook Icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tn-P9-GZe">
+                                                <rect key="frame" x="273" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="3AZ-Sb-k4t"/>
+                                                    <constraint firstAttribute="height" constant="70" id="Dlm-lA-OPG"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Dark AddClass Icon"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="f50-fw-aBf">
+                                        <rect key="frame" x="0.0" y="172" width="343" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4S-Ax-Ut8">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="DbP-bb-sK6"/>
+                                                    <constraint firstAttribute="height" constant="70" id="eyU-EZ-cD2"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Dark Pencil Icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGM-u0-i1E">
+                                                <rect key="frame" x="91" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="UlZ-iw-rVj"/>
+                                                    <constraint firstAttribute="height" constant="70" id="wVf-3s-42R"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Dark ZagWeb Icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6f-D9-CE6">
+                                                <rect key="frame" x="182" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="Amr-22-Sbf"/>
+                                                    <constraint firstAttribute="height" constant="70" id="oSr-yh-o7v"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Dark Outlook Icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VY-JC-ijd">
+                                                <rect key="frame" x="273" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="SiR-yu-nuh"/>
+                                                    <constraint firstAttribute="height" constant="70" id="vPr-6e-nlF"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Dark AddClass Icon"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="T0y-nV-Qz7">
-                                        <rect key="frame" x="0.0" y="86" width="343" height="80"/>
+                                        <rect key="frame" x="0.0" y="258" width="343" height="80"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fec-lc-JOu">
                                                 <rect key="frame" x="0.0" y="0.5" width="80" height="79"/>
