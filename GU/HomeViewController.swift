@@ -11,9 +11,7 @@
 //  <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 //  ZAGWEB ICON
 //  <div>Icons made by <a href="https://www.flaticon.com/authors/prosymbols" title="Prosymbols">Prosymbols</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-//  CLASS LIST ICON
-//  https://www.flaticon.com/authors/pixel-perfect
-
+//
 import UIKit
 import UserNotifications
 
@@ -29,7 +27,7 @@ class HomeViewController: UIViewController {
         let options: UNAuthorizationOptions = [.alert, .sound]
         
         center.getNotificationSettings { (settings) in
-             if settings.authorizationStatus != .authorized {
+            if settings.authorizationStatus != .authorized {
                 center.requestAuthorization(options: options) { (granted, error) in
                     if !granted {
                         print("Something went wrong")
@@ -39,32 +37,22 @@ class HomeViewController: UIViewController {
          }
         //for _ in classList {
         //temp date
-//            let date = Date(timeIntervalSinceNow: 10)
-            
-            
+        let date = Date(timeIntervalSinceNow: 5)
+        let content = UNMutableNotificationContent()
+        content.title = "Don't forget"
+        content.body = "Buy some milk"
+        content.sound = UNNotificationSound.default
+        let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute, .second], from: date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
+        let identifier = "UYLLocalNotification"
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        center.add(request, withCompletionHandler: { (error) in
+            if error != nil {
+                print("error")// Something went wrong
+            }
+        })
         //}
         
     }
-    
-//    func createNotifications(usingClass class: Class) {
-//        let content = UNMutableNotificationContent()
-//        //content.title = "Class \(class.name)"
-//        //content.body = "At: \(class.location)"
-//        content.sound = UNNotificationSound.default
-//        //for date in class.dayList {
-//            let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute], from: date)
-
-//            let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
-//            let identifier = "UYLLocalNotification"
-//            let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-//            self.center.add(request, withCompletionHandler: { (error) in
-//                if error != nil {
-//                 // Something went wrong
-//             }
-//         })
-//        //}
-//    }
-
 
 }
-

@@ -19,7 +19,6 @@
 		1E7C9AF22571C3DE00FD2AF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C9AF12571C3DE00FD2AF8 /* SceneDelegate.swift */; };
 		1E7C9AF42571C3DE00FD2AF8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C9AF32571C3DE00FD2AF8 /* HomeViewController.swift */; };
 		1E7C9AF72571C3DE00FD2AF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C9AF52571C3DE00FD2AF8 /* Main.storyboard */; };
-		1E7C9AFA2571C3DF00FD2AF8 /* GU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C9AF82571C3DF00FD2AF8 /* GU.xcdatamodeld */; };
 		1E7C9AFC2571C3E200FD2AF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C9AFB2571C3E200FD2AF8 /* Assets.xcassets */; };
 		1E7C9AFF2571C3E200FD2AF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C9AFD2571C3E200FD2AF8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -173,7 +172,6 @@
 				1E7C9AF22571C3DE00FD2AF8 /* SceneDelegate.swift in Sources */,
 				1E35FF5525722C50000F2561 /* AddClassViewController.swift in Sources */,
 				1E35FF4C257201A7000F2561 /* BlackBoardViewController.swift in Sources */,
-				1E7C9AFA2571C3DF00FD2AF8 /* GU.xcdatamodeld in Sources */,
 				11FF54D9257712000086A3E2 /* Class+CoreDataProperties.swift in Sources */,
 				11FF54D32577075B0086A3E2 /* ViewClassesViewController.swift in Sources */,
 			);

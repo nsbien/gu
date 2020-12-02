@@ -16,7 +16,6 @@ extension Class {
         return NSFetchRequest<Class>(entityName: "Class")
     }
 
-    @NSManaged public var name: String?
 
 }
 
