@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -370,7 +371,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" axis="vertical" distribution="fillProportionally" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="bpj-Zw-OKx">
-                                <rect key="frame" x="16" y="60" width="343" height="475.5"/>
+                                <rect key="frame" x="16" y="60" width="343" height="473.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgj-BN-f34">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -482,43 +483,28 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Rdj-aC-Sk2">
-                                        <rect key="frame" x="0.0" y="453.5" width="343" height="22"/>
+                                        <rect key="frame" x="0.0" y="453.5" width="343" height="20"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvG-FW-cnN">
-                                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="22"/>
-                                                <state key="normal" title="Button" image="square" catalog="system"/>
-                                                <connections>
-                                                    <action selector="mon:" destination="Gi7-zh-eJC" eventType="touchUpInside" id="JIE-Qv-Aio"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3o-TG-hv1">
-                                                <rect key="frame" x="68.5" y="0.0" width="68.5" height="22"/>
-                                                <state key="normal" title="Button" image="square" catalog="system"/>
-                                                <connections>
-                                                    <action selector="tues:" destination="Gi7-zh-eJC" eventType="touchUpInside" id="BKa-nh-4eG"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQC-rt-gmu">
-                                                <rect key="frame" x="137" y="0.0" width="69" height="22"/>
-                                                <state key="normal" title="Button" image="square" catalog="system"/>
-                                                <connections>
-                                                    <action selector="wed:" destination="Gi7-zh-eJC" eventType="touchUpInside" id="vpr-ZM-Cp7"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DM-1M-IZ1">
-                                                <rect key="frame" x="206" y="0.0" width="68.5" height="22"/>
-                                                <state key="normal" title="Button" image="square" catalog="system"/>
-                                                <connections>
-                                                    <action selector="thurs:" destination="Gi7-zh-eJC" eventType="touchUpInside" id="OdE-JB-7kk"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkT-NS-C4z">
-                                                <rect key="frame" x="274.5" y="0.0" width="68.5" height="22"/>
-                                                <state key="normal" title="Button" image="square" catalog="system"/>
-                                                <connections>
-                                                    <action selector="fri:" destination="Gi7-zh-eJC" eventType="touchUpInside" id="bdn-Ey-crh"/>
-                                                </connections>
-                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="etW-sM-10E">
+                                                <rect key="frame" x="0.0" y="1" width="68.5" height="17.5"/>
+                                                <imageReference key="image" image="square" catalog="system" symbolScale="default"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FPC-us-xlr">
+                                                <rect key="frame" x="68.5" y="1" width="68.5" height="17.5"/>
+                                                <imageReference key="image" image="square" catalog="system" symbolScale="default"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3c0-EO-zta">
+                                                <rect key="frame" x="137" y="1" width="69" height="17.5"/>
+                                                <imageReference key="image" image="square" catalog="system" symbolScale="default"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kZv-zd-JwL">
+                                                <rect key="frame" x="206" y="1" width="68.5" height="17.5"/>
+                                                <imageReference key="image" image="square" catalog="system" symbolScale="default"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Omz-i2-4y9">
+                                                <rect key="frame" x="274.5" y="1" width="68.5" height="17.5"/>
+                                                <imageReference key="image" image="square" catalog="system" symbolScale="default"/>
+                                            </imageView>
                                         </subviews>
                                     </stackView>
                                 </subviews>

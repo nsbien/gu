@@ -22,20 +22,7 @@ class AddClassViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var locationInput: UITextField!
     var selectedLocation: String?
     var locationsPicker: [String] = ["College Hall", "Coughlin Hall", "Crosby Center", "Foley Library", "Herek Center", "Humanities Building", "Human Physiology", "Hughes Hall", "Journalism/Broadcast Integrated Media", "Jepson Center", "Jundt Art Center & Museum", "Law School", "Magnuson Theatre (Performing Arts)", "Martin Centre (Rudolf Fitness)", "McCarthey Athletic Center", "Music Building (Monaghan Mansion)", "Music Hall", "Music Annex", "PACCAR Center (Applied Science", "Peerless Building (Human Physiology/Theatre Annex)", "Rosauer Center (Education)", "Tilford Center", "Theatre/Dance Studios", "Myrtle Woldson Performing Arts Center"]
-     
     
-    @IBAction func mon(_ sender: Any) {
-        print("clickc")
-  
-    }
-    @IBAction func tues(_ sender: Any) {
-    }
-    @IBAction func wed(_ sender: Any) {
-    }
-    @IBAction func thurs(_ sender: Any) {
-    }
-    @IBAction func fri(_ sender: Any) {
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
