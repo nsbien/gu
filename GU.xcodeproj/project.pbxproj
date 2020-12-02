@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11FF54D0257707400086A3E2 /* CampusMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FF54CF257707400086A3E2 /* CampusMapViewController.swift */; };
+		11FF54D32577075B0086A3E2 /* ViewClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FF54D22577075B0086A3E2 /* ViewClassesViewController.swift */; };
+		11FF54D8257712000086A3E2 /* Class+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FF54D6257712000086A3E2 /* Class+CoreDataClass.swift */; };
+		11FF54D9257712000086A3E2 /* Class+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FF54D7257712000086A3E2 /* Class+CoreDataProperties.swift */; };
 		1E35FF4C257201A7000F2561 /* BlackBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E35FF4B257201A7000F2561 /* BlackBoardViewController.swift */; };
 		1E35FF4F25722C31000F2561 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E35FF4E25722C31000F2561 /* EmailViewController.swift */; };
 		1E35FF5225722C3E000F2561 /* ZagWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E35FF5125722C3E000F2561 /* ZagWebViewController.swift */; };
@@ -18,10 +22,13 @@
 		1E7C9AFA2571C3DF00FD2AF8 /* GU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E7C9AF82571C3DF00FD2AF8 /* GU.xcdatamodeld */; };
 		1E7C9AFC2571C3E200FD2AF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C9AFB2571C3E200FD2AF8 /* Assets.xcassets */; };
 		1E7C9AFF2571C3E200FD2AF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C9AFD2571C3E200FD2AF8 /* LaunchScreen.storyboard */; };
-		1EF8D1482576E7A8005D5319 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF8D1472576E7A8005D5319 /* Class.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11FF54CF257707400086A3E2 /* CampusMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusMapViewController.swift; sourceTree = "<group>"; };
+		11FF54D22577075B0086A3E2 /* ViewClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewClassesViewController.swift; sourceTree = "<group>"; };
+		11FF54D6257712000086A3E2 /* Class+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class+CoreDataClass.swift"; sourceTree = "<group>"; };
+		11FF54D7257712000086A3E2 /* Class+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1E35FF4B257201A7000F2561 /* BlackBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBoardViewController.swift; sourceTree = "<group>"; };
 		1E35FF4E25722C31000F2561 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		1E35FF5125722C3E000F2561 /* ZagWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZagWebViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +42,6 @@
 		1E7C9AFB2571C3E200FD2AF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E7C9AFE2571C3E200FD2AF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E7C9B002571C3E200FD2AF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1EF8D1472576E7A8005D5319 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,8 @@
 		1E7C9AEE2571C3DE00FD2AF8 /* GU */ = {
 			isa = PBXGroup;
 			children = (
+				11FF54D6257712000086A3E2 /* Class+CoreDataClass.swift */,
+				11FF54D7257712000086A3E2 /* Class+CoreDataProperties.swift */,
 				1E7C9AEF2571C3DE00FD2AF8 /* AppDelegate.swift */,
 				1E7C9AF12571C3DE00FD2AF8 /* SceneDelegate.swift */,
 				1E7C9AF32571C3DE00FD2AF8 /* HomeViewController.swift */,
@@ -80,7 +88,8 @@
 				1E7C9AFD2571C3E200FD2AF8 /* LaunchScreen.storyboard */,
 				1E7C9B002571C3E200FD2AF8 /* Info.plist */,
 				1E7C9AF82571C3DF00FD2AF8 /* GU.xcdatamodeld */,
-				1EF8D1472576E7A8005D5319 /* Class.swift */,
+				11FF54CF257707400086A3E2 /* CampusMapViewController.swift */,
+				11FF54D22577075B0086A3E2 /* ViewClassesViewController.swift */,
 			);
 			path = GU;
 			sourceTree = "<group>";
@@ -157,13 +166,16 @@
 			files = (
 				1E35FF5225722C3E000F2561 /* ZagWebViewController.swift in Sources */,
 				1E7C9AF42571C3DE00FD2AF8 /* HomeViewController.swift in Sources */,
+				11FF54D8257712000086A3E2 /* Class+CoreDataClass.swift in Sources */,
+				11FF54D0257707400086A3E2 /* CampusMapViewController.swift in Sources */,
 				1E35FF4F25722C31000F2561 /* EmailViewController.swift in Sources */,
-				1EF8D1482576E7A8005D5319 /* Class.swift in Sources */,
 				1E7C9AF02571C3DE00FD2AF8 /* AppDelegate.swift in Sources */,
 				1E7C9AF22571C3DE00FD2AF8 /* SceneDelegate.swift in Sources */,
 				1E35FF5525722C50000F2561 /* AddClassViewController.swift in Sources */,
 				1E35FF4C257201A7000F2561 /* BlackBoardViewController.swift in Sources */,
 				1E7C9AFA2571C3DF00FD2AF8 /* GU.xcdatamodeld in Sources */,
+				11FF54D9257712000086A3E2 /* Class+CoreDataProperties.swift in Sources */,
+				11FF54D32577075B0086A3E2 /* ViewClassesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

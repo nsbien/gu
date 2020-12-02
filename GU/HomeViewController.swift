@@ -46,23 +46,23 @@ class HomeViewController: UIViewController {
         
     }
     
-    func createNotifications(usingClass class: Class) {
-        let content = UNMutableNotificationContent()
-        //content.title = "Class \(class.name)"
-        //content.body = "At: \(class.location)"
-        content.sound = UNNotificationSound.default
-        //for date in class.dayList {
-            let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute], from: date)
-            let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
-            let identifier = "UYLLocalNotification"
-            let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-            self.center.add(request, withCompletionHandler: { (error) in
-                if error != nil {
-                 // Something went wrong
-             }
-         })
-        //}
-    }
+//    func createNotifications(usingClass class: Class) {
+//        let content = UNMutableNotificationContent()
+//        //content.title = "Class \(class.name)"
+//        //content.body = "At: \(class.location)"
+//        content.sound = UNNotificationSound.default
+//        //for date in class.dayList {
+//            let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute], from: date)
+//            let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
+//            let identifier = "UYLLocalNotification"
+//            let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+//            self.center.add(request, withCompletionHandler: { (error) in
+//                if error != nil {
+//                 // Something went wrong
+//             }
+//         })
+//        //}
+//    }
 
 }
 
