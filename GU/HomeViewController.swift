@@ -39,7 +39,7 @@ class HomeViewController: UIViewController {
          }
         //for _ in classList {
         //temp date
-            let date = Date(timeIntervalSinceNow: 10)
+//            let date = Date(timeIntervalSinceNow: 10)
             
             
         //}
@@ -53,6 +53,7 @@ class HomeViewController: UIViewController {
 //        content.sound = UNNotificationSound.default
 //        //for date in class.dayList {
 //            let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute], from: date)
+
 //            let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
 //            let identifier = "UYLLocalNotification"
 //            let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
@@ -63,6 +64,7 @@ class HomeViewController: UIViewController {
 //         })
 //        //}
 //    }
+
 
 }
 

@@ -8,7 +8,7 @@
 import Foundation
 //https://stackoverflow.com/questions/43405959/launch-a-local-notification-at-a-specific-time-in-ios
 
-struct Class {
+struct Class { 
     var name: String
     var meetingTime = DateInterval()
     var location: String

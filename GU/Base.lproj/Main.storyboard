@@ -403,8 +403,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bpj-Zw-OKx">
-                                <rect key="frame" x="16" y="60" width="343" height="547"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" axis="vertical" distribution="fillProportionally" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="bpj-Zw-OKx">
+                                <rect key="frame" x="16" y="60" width="343" height="397"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgj-BN-f34">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -413,72 +413,99 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="255" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g3f-e0-PmB">
-                                        <rect key="frame" x="0.0" y="30.5" width="343" height="34"/>
+                                        <rect key="frame" x="0.0" y="38.5" width="343" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="inputCourseName:" destination="Gi7-zh-eJC" eventType="editingDidEnd" id="dDh-cx-mEL"/>
                                         </connections>
                                     </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fm6-EP-BIa">
-                                        <rect key="frame" x="0.0" y="74.5" width="343" height="216"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fm6-EP-BIa">
+                                        <rect key="frame" x="0.0" y="90.5" width="343" height="216"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4U-GH-bmQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="82" height="216"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="O3l-rU-Dei">
-                                                <rect key="frame" x="87" y="0.0" width="82" height="216"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <connections>
-                                                    <action selector="inputStartPicker:" destination="Gi7-zh-eJC" eventType="valueChanged" id="2Pn-Bx-TTV"/>
-                                                </connections>
-                                            </datePicker>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Time " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPa-aK-5vr">
-                                                <rect key="frame" x="174" y="0.0" width="82" height="216"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="zFg-be-etW">
-                                                <rect key="frame" x="261" y="0.0" width="82" height="216"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <connections>
-                                                    <action selector="inputEndPicker:" destination="Gi7-zh-eJC" eventType="valueChanged" id="YCz-AN-K4q"/>
-                                                    <action selector="inputStartPicker:" destination="Gi7-zh-eJC" eventType="valueChanged" id="hB6-e6-db0"/>
-                                                </connections>
-                                            </datePicker>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Xnd-K9-3kG">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.5" height="216"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4U-GH-bmQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="18" height="216"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3l-rU-Dei">
+                                                        <rect key="frame" x="18" y="0.0" width="153.5" height="216"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <date key="date" timeIntervalSinceReferenceDate="628545600.39920104">
+                                                            <!--2020-12-01 20:00:00 +0000-->
+                                                        </date>
+                                                        <connections>
+                                                            <action selector="inputStartPicker:" destination="Gi7-zh-eJC" eventType="valueChanged" id="2Pn-Bx-TTV"/>
+                                                        </connections>
+                                                    </datePicker>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="bH3-2k-H51">
+                                                <rect key="frame" x="171.5" y="0.0" width="171.5" height="216"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="End" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPa-aK-5vr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="14.5" height="216"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFg-be-etW">
+                                                        <rect key="frame" x="14.5" y="0.0" width="157" height="216"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <date key="date" timeIntervalSinceReferenceDate="628545600.96631801">
+                                                            <!--2020-12-01 20:00:00 +0000-->
+                                                        </date>
+                                                        <connections>
+                                                            <action selector="inputEndPicker:" destination="Gi7-zh-eJC" eventType="valueChanged" id="YCz-AN-K4q"/>
+                                                        </connections>
+                                                    </datePicker>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p40-gg-A7p">
-                                        <rect key="frame" x="0.0" y="300.5" width="343" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="324.5" width="343" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUo-bn-hpH">
-                                        <rect key="frame" x="0.0" y="331" width="343" height="216"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </pickerView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NVf-cr-lNP">
+                                        <rect key="frame" x="0.0" y="363" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vjz-dR-mgP">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" image="plus" catalog="system" id="IZj-gD-eIv"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qAt-DZ-6ee"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bpj-Zw-OKx" firstAttribute="top" secondItem="qAt-DZ-6ee" secondAttribute="top" constant="16" id="1ga-qL-UdV"/>
+                            <constraint firstItem="qAt-DZ-6ee" firstAttribute="bottom" secondItem="vjz-dR-mgP" secondAttribute="bottom" id="KwK-UF-4YD"/>
                             <constraint firstItem="bpj-Zw-OKx" firstAttribute="leading" secondItem="qAt-DZ-6ee" secondAttribute="leading" constant="16" id="SYQ-6K-KsJ"/>
+                            <constraint firstItem="vjz-dR-mgP" firstAttribute="trailing" secondItem="qAt-DZ-6ee" secondAttribute="trailing" id="dgO-Xr-hAj"/>
                             <constraint firstItem="qAt-DZ-6ee" firstAttribute="trailing" secondItem="bpj-Zw-OKx" secondAttribute="trailing" constant="16" id="exS-8R-GOh"/>
+                            <constraint firstItem="vjz-dR-mgP" firstAttribute="leading" secondItem="qAt-DZ-6ee" secondAttribute="leading" id="vhQ-Fj-JGd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Classes" id="vaz-9v-ZPH"/>
                     <connections>
                         <outlet property="courseName" destination="Bgj-BN-f34" id="oq0-RB-4rU"/>
                         <outlet property="endTIme" destination="qPa-aK-5vr" id="teP-UE-UNw"/>
+                        <outlet property="location" destination="p40-gg-A7p" id="dqB-Sr-uVD"/>
+                        <outlet property="locationInput" destination="NVf-cr-lNP" id="bef-KU-WWu"/>
                         <outlet property="startTime" destination="m4U-GH-bmQ" id="IM7-eX-sdk"/>
                     </connections>
                 </viewController>
@@ -499,6 +526,7 @@
         <image name="gonzaga" width="436" height="100"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="thermometer.sun.fill" catalog="system" width="114" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
