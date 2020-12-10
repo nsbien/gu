@@ -317,7 +317,7 @@
         <!--BlackBoard-->
         <scene sceneID="3Pk-ca-bNx">
             <objects>
-                <viewController id="8Z1-Vw-s4r" sceneMemberID="viewController">
+                <viewController id="8Z1-Vw-s4r" customClass="BlackBoardViewController" customModule="GU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dCt-Ls-zSG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
