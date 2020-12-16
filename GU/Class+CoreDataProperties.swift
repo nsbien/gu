@@ -16,7 +16,7 @@ extension Class {
         return NSFetchRequest<Class>(entityName: "Class")
     }
 
-
+    
 }
 
 extension Class : Identifiable {

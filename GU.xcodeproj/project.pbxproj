@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1160F4D125785ACE00AF829B /* Class+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160F4CF25785ACE00AF829B /* Class+CoreDataClass.swift */; };
+		1160F4D225785ACE00AF829B /* Class+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160F4D025785ACE00AF829B /* Class+CoreDataProperties.swift */; };
+		1160F4D825785CB600AF829B /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160F4D725785CB600AF829B /* ClassTableViewCell.swift */; };
 		11FF54D0257707400086A3E2 /* CampusMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FF54CF257707400086A3E2 /* CampusMapViewController.swift */; };
 		11FF54D32577075B0086A3E2 /* ViewClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FF54D22577075B0086A3E2 /* ViewClassesViewController.swift */; };
-		11FF54D8257712000086A3E2 /* Class+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FF54D6257712000086A3E2 /* Class+CoreDataClass.swift */; };
-		11FF54D9257712000086A3E2 /* Class+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FF54D7257712000086A3E2 /* Class+CoreDataProperties.swift */; };
 		1E35FF4C257201A7000F2561 /* BlackBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E35FF4B257201A7000F2561 /* BlackBoardViewController.swift */; };
 		1E35FF4F25722C31000F2561 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E35FF4E25722C31000F2561 /* EmailViewController.swift */; };
 		1E35FF5225722C3E000F2561 /* ZagWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E35FF5125722C3E000F2561 /* ZagWebViewController.swift */; };
@@ -24,10 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1160F4CB257859EB00AF829B /* ClassDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClassDataModel.xcdatamodel; sourceTree = "<group>"; };
+		1160F4CF25785ACE00AF829B /* Class+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Class+CoreDataClass.swift"; path = "../Class+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1160F4D025785ACE00AF829B /* Class+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Class+CoreDataProperties.swift"; path = "../Class+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1160F4D725785CB600AF829B /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewCell.swift; sourceTree = "<group>"; };
 		11FF54CF257707400086A3E2 /* CampusMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusMapViewController.swift; sourceTree = "<group>"; };
 		11FF54D22577075B0086A3E2 /* ViewClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewClassesViewController.swift; sourceTree = "<group>"; };
-		11FF54D6257712000086A3E2 /* Class+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class+CoreDataClass.swift"; sourceTree = "<group>"; };
-		11FF54D7257712000086A3E2 /* Class+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1E35FF4B257201A7000F2561 /* BlackBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBoardViewController.swift; sourceTree = "<group>"; };
 		1E35FF4E25722C31000F2561 /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		1E35FF5125722C3E000F2561 /* ZagWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZagWebViewController.swift; sourceTree = "<group>"; };
@@ -37,7 +40,6 @@
 		1E7C9AF12571C3DE00FD2AF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1E7C9AF32571C3DE00FD2AF8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1E7C9AF62571C3DE00FD2AF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1E7C9AF92571C3DF00FD2AF8 /* GU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GU.xcdatamodel; sourceTree = "<group>"; };
 		1E7C9AFB2571C3E200FD2AF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E7C9AFE2571C3E200FD2AF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E7C9B002571C3E200FD2AF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,8 +75,8 @@
 		1E7C9AEE2571C3DE00FD2AF8 /* GU */ = {
 			isa = PBXGroup;
 			children = (
-				11FF54D6257712000086A3E2 /* Class+CoreDataClass.swift */,
-				11FF54D7257712000086A3E2 /* Class+CoreDataProperties.swift */,
+				1160F4CF25785ACE00AF829B /* Class+CoreDataClass.swift */,
+				1160F4D025785ACE00AF829B /* Class+CoreDataProperties.swift */,
 				1E7C9AEF2571C3DE00FD2AF8 /* AppDelegate.swift */,
 				1E7C9AF12571C3DE00FD2AF8 /* SceneDelegate.swift */,
 				1E7C9AF32571C3DE00FD2AF8 /* HomeViewController.swift */,
@@ -86,9 +88,10 @@
 				1E7C9AFB2571C3E200FD2AF8 /* Assets.xcassets */,
 				1E7C9AFD2571C3E200FD2AF8 /* LaunchScreen.storyboard */,
 				1E7C9B002571C3E200FD2AF8 /* Info.plist */,
-				1E7C9AF82571C3DF00FD2AF8 /* GU.xcdatamodeld */,
 				11FF54CF257707400086A3E2 /* CampusMapViewController.swift */,
+				1160F4CA257859EB00AF829B /* ClassDataModel.xcdatamodeld */,
 				11FF54D22577075B0086A3E2 /* ViewClassesViewController.swift */,
+				1160F4D725785CB600AF829B /* ClassTableViewCell.swift */,
 			);
 			path = GU;
 			sourceTree = "<group>";
@@ -165,14 +168,15 @@
 			files = (
 				1E35FF5225722C3E000F2561 /* ZagWebViewController.swift in Sources */,
 				1E7C9AF42571C3DE00FD2AF8 /* HomeViewController.swift in Sources */,
-				11FF54D8257712000086A3E2 /* Class+CoreDataClass.swift in Sources */,
 				11FF54D0257707400086A3E2 /* CampusMapViewController.swift in Sources */,
 				1E35FF4F25722C31000F2561 /* EmailViewController.swift in Sources */,
 				1E7C9AF02571C3DE00FD2AF8 /* AppDelegate.swift in Sources */,
+				1160F4D125785ACE00AF829B /* Class+CoreDataClass.swift in Sources */,
 				1E7C9AF22571C3DE00FD2AF8 /* SceneDelegate.swift in Sources */,
 				1E35FF5525722C50000F2561 /* AddClassViewController.swift in Sources */,
+				1160F4D825785CB600AF829B /* ClassTableViewCell.swift in Sources */,
 				1E35FF4C257201A7000F2561 /* BlackBoardViewController.swift in Sources */,
-				11FF54D9257712000086A3E2 /* Class+CoreDataProperties.swift in Sources */,
+				1160F4D225785ACE00AF829B /* Class+CoreDataProperties.swift in Sources */,
 				11FF54D32577075B0086A3E2 /* ViewClassesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,13 +383,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		1E7C9AF82571C3DF00FD2AF8 /* GU.xcdatamodeld */ = {
+		1160F4CA257859EB00AF829B /* ClassDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				1E7C9AF92571C3DF00FD2AF8 /* GU.xcdatamodel */,
+				1160F4CB257859EB00AF829B /* ClassDataModel.xcdatamodel */,
 			);
-			currentVersion = 1E7C9AF92571C3DF00FD2AF8 /* GU.xcdatamodel */;
-			path = GU.xcdatamodeld;
+			currentVersion = 1160F4CB257859EB00AF829B /* ClassDataModel.xcdatamodel */;
+			path = ClassDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

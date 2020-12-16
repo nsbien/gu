@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RrO-43-NlH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RrO-43-NlH">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -198,7 +198,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TripCell" id="h02-es-4Iz" customClass="TripTableViewCell" customModule="GU" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClassCell" id="h02-es-4Iz" customClass="TripTableViewCell" customModule="GU" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h02-es-4Iz" id="6sM-26-K7t">
@@ -256,6 +256,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FRc-wp-cT4" id="jt1-hc-3Wg"/>
+                                    <outlet property="delegate" destination="FRc-wp-cT4" id="LNF-Lj-dT3"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gFc-jV-jnJ"/>
@@ -272,6 +276,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jfH-CH-YTe"/>
+                    <connections>
+                        <outlet property="tableView" destination="38x-KE-IUm" id="uJE-bh-vHo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oRt-HI-dwk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -284,12 +291,43 @@
                     <view key="view" contentMode="scaleToFill" id="8b9-tO-u5U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Campus-Map-CURRENT" translatesAutoresizingMaskIntoConstraints="NO" id="mSY-Bz-anw">
+                                <rect key="frame" x="16" y="60" width="343" height="591"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="PJT-nS-vZg" appends="YES" id="6vX-nl-iSw"/>
+                                    <outletCollection property="gestureRecognizers" destination="oej-Dp-9Uf" appends="YES" id="JMG-L5-jHb"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="CUH-V3-K3B"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mSY-Bz-anw" firstAttribute="leading" secondItem="CUH-V3-K3B" secondAttribute="leading" constant="16" id="3Az-iK-qzw"/>
+                            <constraint firstItem="CUH-V3-K3B" firstAttribute="bottom" secondItem="mSY-Bz-anw" secondAttribute="bottom" constant="16" id="3er-s5-lVl"/>
+                            <constraint firstItem="CUH-V3-K3B" firstAttribute="trailing" secondItem="mSY-Bz-anw" secondAttribute="trailing" constant="16" id="YKJ-G1-Sjs"/>
+                            <constraint firstItem="mSY-Bz-anw" firstAttribute="top" secondItem="CUH-V3-K3B" secondAttribute="top" constant="16" id="tC6-Cr-z5r"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="o5r-xr-6jh"/>
+                    <connections>
+                        <outlet property="imageView" destination="mSY-Bz-anw" id="ct4-iA-QrU"/>
+                        <outlet property="panGesture" destination="oej-Dp-9Uf" id="1qB-0C-nF9"/>
+                        <outlet property="pinchGesture" destination="PJT-nS-vZg" id="ew1-Hd-dMH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H8P-qR-wrf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="PJT-nS-vZg">
+                    <connections>
+                        <action selector="pinchGestureAction:" destination="oFl-VJ-S6a" id="19I-MR-K3w"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="oej-Dp-9Uf">
+                    <connections>
+                        <action selector="panGestureAction:" destination="oFl-VJ-S6a" id="9n2-mg-9VY"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2409" y="481"/>
         </scene>
@@ -545,6 +583,7 @@
     </scenes>
     <color key="tintColor" red="0.7843137255" green="0.87058823529999996" blue="0.92941176469999998" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
     <resources>
+        <image name="Campus-Map-CURRENT" width="7696" height="3650"/>
         <image name="Dark AddClass Icon" width="500" height="500"/>
         <image name="Dark Location Icon" width="500" height="500"/>
         <image name="Dark Notebook Icon" width="500" height="500"/>

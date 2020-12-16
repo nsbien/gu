@@ -7,7 +7,9 @@
 
 import UIKit
 
-class AddClassViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UINavigationControllerDelegate {
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBOutlet var courseName: UILabel!
     @IBAction func inputCourseName(_ sender: Any) {
@@ -30,6 +32,39 @@ class AddClassViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         dismissPickerView()
 //        HomeViewController().createNotifications(usingClass: Class)
     }
+    
+    
+    @IBAction func addButtonPressed() {
+        let center = UNUserNotificationCenter.current()
+        let options: UNAuthorizationOptions = [.alert, .sound]
+        
+        center.getNotificationSettings { (settings) in
+            if settings.authorizationStatus != .authorized {
+                center.requestAuthorization(options: options) { (granted, error) in
+                    if !granted {
+                        print("Something went wrong")
+                    }
+                }
+             }
+         }
+        //for _ in classList {
+        //temp date
+        let date = Date(timeIntervalSinceNow: 5)
+        let content = UNMutableNotificationContent()
+        content.title = "Don't forget"
+        content.body = "Buy some milk"
+        content.sound = UNNotificationSound.default
+        let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute, .second], from: date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
+        let identifier = "UYLLocalNotification"
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        center.add(request, withCompletionHandler: { (error) in
+            if error != nil {
+                print("error")
+            }
+        })
+    }
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

@@ -9,21 +9,32 @@ import UIKit
 
 class CampusMapViewController: UIViewController {
 
+    @IBOutlet var imageView: UIImageView!
+    
+    @IBOutlet var panGesture: UIPanGestureRecognizer!
+    @IBOutlet var pinchGesture: UIPinchGestureRecognizer!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func pinchGestureAction(_ sender: Any) {
+        guard let gesture = pinchGesture.view else {
+            return
+        }
+        gesture.transform = gesture.transform.scaledBy(x: pinchGesture.scale, y: pinchGesture.scale)
+        pinchGesture.scale = 1
     }
-    */
+    @IBAction func panGestureAction(_ sender: Any) {
+        let translation = panGesture.translation(in: view)
+          guard let gestureView = panGesture.view else {
+            return
+          }
 
+          gestureView.center = CGPoint(
+            x: gestureView.center.x + translation.x,
+            y: gestureView.center.y + translation.y
+          )
+          panGesture.setTranslation(.zero, in: view)
+    }
+    
 }
