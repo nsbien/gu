@@ -37,11 +37,11 @@ class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         if isCheckedMon == false {
             mondayOutlet.setImage(UIImage(named: "checked.png"), for: .normal)
             isCheckedMon = true
-            weekdays.append(1)
+            weekdays.append(2)
         } else {
             mondayOutlet.setImage(UIImage(named: "box.png"), for: .normal)
             isCheckedMon = false
-            weekdays = weekdays.filter {$0 != 1}
+            weekdays = weekdays.filter {$0 != 2}
         }
     }
     @IBOutlet var tuesdayOutlet: UIButton!
@@ -49,11 +49,11 @@ class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         if isCheckedTue == false {
             tuesdayOutlet.setImage(UIImage(named: "checked.png"), for: .normal)
             isCheckedTue = true
-            weekdays.append(2)
+            weekdays.append(3)
         } else {
             tuesdayOutlet.setImage(UIImage(named: "box.png"), for: .normal)
             isCheckedTue = false
-            weekdays = weekdays.filter {$0 != 2}
+            weekdays = weekdays.filter {$0 != 3}
         }
     }
     @IBOutlet var wednesdayOutlet: UIButton!
@@ -61,11 +61,11 @@ class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         if isCheckedWed == false {
             wednesdayOutlet.setImage(UIImage(named: "checked.png"), for: .normal)
             isCheckedWed = true
-            weekdays.append(3)
+            weekdays.append(4)
         } else {
             wednesdayOutlet.setImage(UIImage(named: "box.png"), for: .normal)
             isCheckedWed = false
-            weekdays = weekdays.filter {$0 != 3}
+            weekdays = weekdays.filter {$0 != 4}
         }
     }
     @IBOutlet var thursdayOutlet: UIButton!
@@ -73,11 +73,11 @@ class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         if isCheckedThu == false {
             thursdayOutlet.setImage(UIImage(named: "checked.png"), for: .normal)
             isCheckedThu = true
-            weekdays.append(4)
+            weekdays.append(5)
         } else {
             thursdayOutlet.setImage(UIImage(named: "box.png"), for: .normal)
             isCheckedThu = false
-            weekdays = weekdays.filter {$0 != 4}
+            weekdays = weekdays.filter {$0 != 5}
         }
     }
     @IBOutlet var fridayOutlet: UIButton!
@@ -85,11 +85,11 @@ class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         if isCheckedFri == false {
             fridayOutlet.setImage(UIImage(named: "checked.png"), for: .normal)
             isCheckedFri = true
-            weekdays.append(5)
+            weekdays.append(6)
         } else {
             fridayOutlet.setImage(UIImage(named: "box.png"), for: .normal)
             isCheckedFri = false
-            weekdays = weekdays.filter {$0 != 5}
+            weekdays = weekdays.filter {$0 != 6}
         }
     }
     
@@ -100,11 +100,23 @@ class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerVie
 //        HomeViewController().createNotifications(usingClass: Class)
     }
     
+    func checkInputs() -> Bool {
+        if let _ = selectedTime {
+            if let _ = inputCourseName {
+                if let _ = selectedLocation {
+                    if !weekdays.isEmpty {
+                        return true
+                    }
+                }
+            }
+        }
+        return false
+    }
+    
     
     @IBAction func addButtonPressed() {
         let center = UNUserNotificationCenter.current()
         let options: UNAuthorizationOptions = [.alert, .sound]
-        
         center.getNotificationSettings { (settings) in
             if settings.authorizationStatus != .authorized {
                 center.requestAuthorization(options: options) { (granted, error) in
@@ -114,40 +126,47 @@ class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerVie
                 }
              }
          }
-        var hour: Int = 0
-        var minute: Int = 0
-        if let time = selectedTime {
-            let components = Calendar.current.dateComponents([.hour, .minute], from: time)
-            hour = components.hour!
-            minute = components.minute!
-        }
-       
         
-        for days in weekdays {
-            print(days)
-            var components = DateComponents()
-            components.hour = hour
-            components.minute = minute
-            components.weekday = days
-            components.timeZone = .current
-            let calendar = Calendar(identifier: .gregorian)
-            let date = calendar.date(from: components)!
-            print(date)
+        // error handling
+        if checkInputs() {
+            // grab time user selected as class start
+            var hour: Int = 0
+            var minute: Int = 0
+            if let time = selectedTime {
+                let components = Calendar.current.dateComponents([.hour, .minute], from: time)
+                hour = components.hour!
+                minute = components.minute!
+            }
+           
+            // iterates through days user selected and creates notifications
+            for days in weekdays {
+                print(days)
+                var components = DateComponents()
+                components.hour = hour
+                components.minute = minute
+                components.weekday = days
+                components.weekdayOrdinal = 10
+                components.timeZone = .current
+                let calendar = Calendar(identifier: .gregorian)
+                let date = calendar.date(from: components)!
 
-//            let date = Date(timeIntervalSinceNow: 5)
-            let content = UNMutableNotificationContent()
-            content.title = inputCourseName.text!
-            content.body = "you have class!"
-            content.sound = UNNotificationSound.default
-            let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute], from: date)
-            let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
-            let identifier = "UYLLocalNotification"
-            let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-            center.add(request, withCompletionHandler: { (error) in
-                if error != nil {
-                    print("error")
-                }
-            })
+    //            let date = Date(timeIntervalSinceNow: 5)
+                let content = UNMutableNotificationContent()
+                content.title = inputCourseName.text!
+                content.body = "\(inputCourseName.text!) is starting. Head to \(selectedLocation!)."
+                content.sound = UNNotificationSound.default
+                let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute], from: date)
+                let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
+                let identifier = "UYLLocalNotification"
+                let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+                center.add(request, withCompletionHandler: { (error) in
+                    if error != nil {
+                        print("error")
+                    }
+                })
+            }
+        } else {
+            print("fill in all items")
         }
     }
     
