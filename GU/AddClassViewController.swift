@@ -9,14 +9,13 @@ import UIKit
 
 class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UINavigationControllerDelegate {
     
+    var selectedTime: Date?
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     @IBOutlet var courseName: UILabel!
-    @IBAction func inputCourseName(_ sender: Any) {
-    }
+    @IBOutlet var inputCourseName: UITextField!
     @IBOutlet var startTime: UILabel!
     @IBAction func inputStartPicker(_ sender: UIDatePicker) {
-        var selectedDate = sender.date
-        print(selectedDate)
+        selectedTime = sender.date
     }
     @IBOutlet weak var endTIme: UILabel!
     @IBAction func inputEndPicker(_ sender: Any) {
@@ -115,31 +114,41 @@ class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerVie
                 }
              }
          }
-//        for days in weekdays {
-//            var components = DateComponents()
-//            components.hour = hour
-//            components.minute = minute
-//            components.weekday = days
-//            components.weekdayOrdinal = 10
-//            components.timeZone = .current
-//            let calendar = Calendar(identifier: .gregorian)
-//            let date = date(from: components)!
-//
+        var hour: Int = 0
+        var minute: Int = 0
+        if let time = selectedTime {
+            let components = Calendar.current.dateComponents([.hour, .minute], from: time)
+            hour = components.hour!
+            minute = components.minute!
+        }
+       
+        
+        for days in weekdays {
+            print(days)
+            var components = DateComponents()
+            components.hour = hour
+            components.minute = minute
+            components.weekday = days
+            components.timeZone = .current
+            let calendar = Calendar(identifier: .gregorian)
+            let date = calendar.date(from: components)!
+            print(date)
+
 //            let date = Date(timeIntervalSinceNow: 5)
-//            let content = UNMutableNotificationContent()
-//            content.title = "Don't forget"
-//            content.body = "Buy some milk"
-//            content.sound = UNNotificationSound.default
-//            let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute, .second], from: date)
-//            let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
-//            let identifier = "UYLLocalNotification"
-//            let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-//            center.add(request, withCompletionHandler: { (error) in
-//                if error != nil {
-//                    print("error")
-//                }
-//            })
-//        }
+            let content = UNMutableNotificationContent()
+            content.title = inputCourseName.text!
+            content.body = "you have class!"
+            content.sound = UNNotificationSound.default
+            let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute], from: date)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
+            let identifier = "UYLLocalNotification"
+            let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+            center.add(request, withCompletionHandler: { (error) in
+                if error != nil {
+                    print("error")
+                }
+            })
+        }
     }
     
     

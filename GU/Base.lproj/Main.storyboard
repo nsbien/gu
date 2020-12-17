@@ -439,9 +439,6 @@
                                         <rect key="frame" x="0.0" y="38.5" width="343" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="inputCourseName:" destination="Gi7-zh-eJC" eventType="editingDidEnd" id="dDh-cx-mEL"/>
-                                        </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fm6-EP-BIa">
                                         <rect key="frame" x="0.0" y="90.5" width="343" height="216"/>
@@ -455,7 +452,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3l-rU-Dei">
+                                                    <datePicker contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3l-rU-Dei">
                                                         <rect key="frame" x="18" y="0.0" width="153.5" height="216"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -463,6 +460,7 @@
                                                             <!--2020-12-01 20:00:00 +0000-->
                                                         </date>
                                                         <connections>
+                                                            <action selector="addButtonPressed" destination="Gi7-zh-eJC" eventType="valueChanged" id="35i-wL-ctB"/>
                                                             <action selector="inputStartPicker:" destination="Gi7-zh-eJC" eventType="valueChanged" id="2Pn-Bx-TTV"/>
                                                         </connections>
                                                     </datePicker>
@@ -606,6 +604,7 @@
                         <outlet property="courseName" destination="Bgj-BN-f34" id="oq0-RB-4rU"/>
                         <outlet property="endTIme" destination="qPa-aK-5vr" id="teP-UE-UNw"/>
                         <outlet property="fridayOutlet" destination="I53-dX-R3o" id="FE6-lF-DWc"/>
+                        <outlet property="inputCourseName" destination="g3f-e0-PmB" id="mFE-lP-80H"/>
                         <outlet property="location" destination="p40-gg-A7p" id="dqB-Sr-uVD"/>
                         <outlet property="locationInput" destination="NVf-cr-lNP" id="bef-KU-WWu"/>
                         <outlet property="mondayOutlet" destination="hXo-YM-m2I" id="eHy-6a-uJk"/>
