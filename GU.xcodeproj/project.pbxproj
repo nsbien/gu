@@ -21,6 +21,7 @@
 		1E7C9AFF2571C3E200FD2AF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C9AFD2571C3E200FD2AF8 /* LaunchScreen.storyboard */; };
 		1EF27541258B217C0029193A /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF27540258B217C0029193A /* NewsViewController.swift */; };
 		1EF27545258B248B0029193A /* DiningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF27544258B248B0029193A /* DiningViewController.swift */; };
+		1EF27549258B29D70029193A /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF27548258B29D70029193A /* EmergencyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		1E7C9B002571C3E200FD2AF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EF27540258B217C0029193A /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		1EF27544258B248B0029193A /* DiningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningViewController.swift; sourceTree = "<group>"; };
+		1EF27548258B29D70029193A /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +84,9 @@
 				1E35FF5425722C50000F2561 /* AddClassViewController.swift */,
 				1EF27540258B217C0029193A /* NewsViewController.swift */,
 				11FF54CF257707400086A3E2 /* CampusMapViewController.swift */,
-				1EF27544258B248B0029193A /* DiningViewController.swift */,
 				112268AE258ABE38006F5D16 /* SportsViewController.swift */,
+				1EF27544258B248B0029193A /* DiningViewController.swift */,
+				1EF27548258B29D70029193A /* EmergencyViewController.swift */,
 				1E7C9AFB2571C3E200FD2AF8 /* Assets.xcassets */,
 				1E7C9AFD2571C3E200FD2AF8 /* LaunchScreen.storyboard */,
 				1E7C9B002571C3E200FD2AF8 /* Info.plist */,
@@ -163,6 +166,7 @@
 			files = (
 				1E35FF5225722C3E000F2561 /* ZagWebViewController.swift in Sources */,
 				1E7C9AF42571C3DE00FD2AF8 /* HomeViewController.swift in Sources */,
+				1EF27549258B29D70029193A /* EmergencyViewController.swift in Sources */,
 				1EF27545258B248B0029193A /* DiningViewController.swift in Sources */,
 				11FF54D0257707400086A3E2 /* CampusMapViewController.swift in Sources */,
 				1EF27541258B217C0029193A /* NewsViewController.swift in Sources */,
