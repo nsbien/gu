@@ -16,6 +16,8 @@ class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     @IBAction func inputStartPicker(_ sender: UIDatePicker) {
         selectedTime = sender.date
     }
+    @IBOutlet var datePicker: UIDatePicker!
+    @IBOutlet var datePickerEnd: UIDatePicker!
     @IBOutlet weak var endTIme: UILabel!
     @IBAction func inputEndPicker(_ sender: Any) {
     }  
@@ -113,6 +115,23 @@ class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         return false
     }
     
+    func clearInputs() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        
+        if let date = dateFormatter.date(from: "12:00") {
+            datePicker.date = date
+            datePickerEnd.date = date
+        }
+        
+        inputCourseName.text = ""
+        locationInput.text = ""
+        mondayOutlet.setImage(UIImage(named: "box.png"), for: .normal)
+        tuesdayOutlet.setImage(UIImage(named: "box.png"), for: .normal)
+        wednesdayOutlet.setImage(UIImage(named: "box.png"), for: .normal)
+        thursdayOutlet.setImage(UIImage(named: "box.png"), for: .normal)
+        fridayOutlet.setImage(UIImage(named: "box.png"), for: .normal)
+    }
     
     @IBAction func addButtonPressed() {
         let center = UNUserNotificationCenter.current()
@@ -148,14 +167,15 @@ class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerVie
                 components.weekdayOrdinal = 10
                 components.timeZone = .current
                 let calendar = Calendar(identifier: .gregorian)
-                let date = calendar.date(from: components)!
+//                let date = calendar.date(from: components)!
 
-    //            let date = Date(timeIntervalSinceNow: 5)
+                let date = Date(timeIntervalSinceNow: 10)
                 let content = UNMutableNotificationContent()
-                content.title = inputCourseName.text!
-                content.body = "\(inputCourseName.text!) is starting. Head to \(selectedLocation!)."
+                let tempName = inputCourseName.text!
+                content.title = tempName
+                content.body = "\(tempName) is starting. Head to \(selectedLocation!)."
                 content.sound = UNNotificationSound.default
-                let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute], from: date)
+                let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute, .second], from: date)
                 let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
                 let identifier = "UYLLocalNotification"
                 let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
@@ -164,6 +184,7 @@ class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerVie
                         print("error")
                     }
                 })
+                clearInputs()
             }
         } else {
             print("fill in all items")

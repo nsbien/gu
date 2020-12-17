@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--GU Mobile-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="GU" customModuleProvider="target" sceneMemberID="viewController">
@@ -151,7 +151,7 @@
                             <constraint firstItem="Zf5-JL-YTu" firstAttribute="top" secondItem="86g-94-62r" secondAttribute="bottom" constant="16" id="svz-bj-hXi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="GU Mobile" id="cCx-zB-aQG">
+                    <navigationItem key="navigationItem" id="cCx-zB-aQG">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="thermometer.sun.fill" catalog="system" id="Jls-cg-bhX">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
@@ -240,19 +240,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBN-hG-slx">
-                                <rect key="frame" x="164" y="76" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7I-5Q-gLD">
-                                <rect key="frame" x="164" y="143" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TQM-Qm-fEh">
+                                <rect key="frame" x="71.5" y="293.5" width="232" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBN-hG-slx">
+                                        <rect key="frame" x="0.0" y="0.0" width="232" height="30"/>
+                                        <state key="normal" title="Call Campus Security">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="callCampusSecurity:" destination="GGn-ou-K2y" eventType="touchUpInside" id="JfI-7A-uAP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7I-5Q-gLD">
+                                        <rect key="frame" x="0.0" y="50" width="232" height="30"/>
+                                        <state key="normal" title="Call Health &amp; Counseling Services">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="callHealthCounseling:" destination="GGn-ou-K2y" eventType="touchUpInside" id="bN4-dd-rlh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4mc-oE-Bup"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TQM-Qm-fEh" firstAttribute="centerX" secondItem="m6i-OH-UNF" secondAttribute="centerX" id="FD7-rf-BBk"/>
+                            <constraint firstItem="TQM-Qm-fEh" firstAttribute="centerY" secondItem="m6i-OH-UNF" secondAttribute="centerY" id="mCg-nG-3eD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rSo-ix-xtJ"/>
                 </viewController>
@@ -531,7 +548,7 @@
                                         </connections>
                                     </barButtonItem>
                                 </items>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="linkColor"/>
                             </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qAt-DZ-6ee"/>
@@ -545,6 +562,8 @@
                     <navigationItem key="navigationItem" title="Add Classes" id="vaz-9v-ZPH"/>
                     <connections>
                         <outlet property="courseName" destination="Bgj-BN-f34" id="oq0-RB-4rU"/>
+                        <outlet property="datePicker" destination="O3l-rU-Dei" id="3Am-eS-V9S"/>
+                        <outlet property="datePickerEnd" destination="zFg-be-etW" id="ubf-At-Qux"/>
                         <outlet property="endTIme" destination="qPa-aK-5vr" id="teP-UE-UNw"/>
                         <outlet property="fridayOutlet" destination="I53-dX-R3o" id="FE6-lF-DWc"/>
                         <outlet property="inputCourseName" destination="g3f-e0-PmB" id="mFE-lP-80H"/>
@@ -579,6 +598,9 @@
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="thermometer.sun.fill" catalog="system" width="114" height="128"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
