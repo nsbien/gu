@@ -22,10 +22,6 @@ class ClassTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    /**
-     Updates the labels with correct trip information and images
-     Parameters: the trip
-     */
     func update(with classInfo: Class) {
         //let dateFormatter = DateFormatter()
         //dateFormatter.dateFormat = "MM/dd/yyyy"

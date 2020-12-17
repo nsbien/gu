@@ -9,7 +9,6 @@ import UIKit
 
 class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UINavigationControllerDelegate {
     
-    var selectedTime: Date?
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     @IBOutlet var courseName: UILabel!
     @IBOutlet var inputCourseName: UITextField!
@@ -26,6 +25,7 @@ class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     var locationsPicker: [String] = ["College Hall", "Coughlin Hall", "Crosby Center", "Foley Library", "Herek Center", "Humanities Building", "Human Physiology", "Hughes Hall", "Journalism/Broadcast Integrated Media", "Jepson Center", "Jundt Art Center & Museum", "Law School", "Magnuson Theatre (Performing Arts)", "Martin Centre (Rudolf Fitness)", "McCarthey Athletic Center", "Music Building (Monaghan Mansion)", "Music Hall", "Music Annex", "PACCAR Center (Applied Science", "Peerless Building (Human Physiology/Theatre Annex)", "Rosauer Center (Education)", "Tilford Center", "Theatre/Dance Studios", "Myrtle Woldson Performing Arts Center"]
     
     var weekdays: [Int] = []
+    var selectedTime: Date?
     var isCheckedMon = false
     var isCheckedTue = false
     var isCheckedWed = false
