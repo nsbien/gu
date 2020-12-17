@@ -19,6 +19,8 @@
 		1E7C9AF72571C3DE00FD2AF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C9AF52571C3DE00FD2AF8 /* Main.storyboard */; };
 		1E7C9AFC2571C3E200FD2AF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C9AFB2571C3E200FD2AF8 /* Assets.xcassets */; };
 		1E7C9AFF2571C3E200FD2AF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7C9AFD2571C3E200FD2AF8 /* LaunchScreen.storyboard */; };
+		1EF27541258B217C0029193A /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF27540258B217C0029193A /* NewsViewController.swift */; };
+		1EF27545258B248B0029193A /* DiningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF27544258B248B0029193A /* DiningViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		1E7C9AFB2571C3E200FD2AF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E7C9AFE2571C3E200FD2AF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E7C9B002571C3E200FD2AF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EF27540258B217C0029193A /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		1EF27544258B248B0029193A /* DiningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,13 +74,15 @@
 			children = (
 				1E7C9AEF2571C3DE00FD2AF8 /* AppDelegate.swift */,
 				1E7C9AF12571C3DE00FD2AF8 /* SceneDelegate.swift */,
+				1E7C9AF52571C3DE00FD2AF8 /* Main.storyboard */,
 				1E7C9AF32571C3DE00FD2AF8 /* HomeViewController.swift */,
 				1E35FF4B257201A7000F2561 /* BlackBoardViewController.swift */,
 				1E35FF5125722C3E000F2561 /* ZagWebViewController.swift */,
 				1E35FF4E25722C31000F2561 /* EmailViewController.swift */,
-				1E7C9AF52571C3DE00FD2AF8 /* Main.storyboard */,
 				1E35FF5425722C50000F2561 /* AddClassViewController.swift */,
+				1EF27540258B217C0029193A /* NewsViewController.swift */,
 				11FF54CF257707400086A3E2 /* CampusMapViewController.swift */,
+				1EF27544258B248B0029193A /* DiningViewController.swift */,
 				112268AE258ABE38006F5D16 /* SportsViewController.swift */,
 				1E7C9AFB2571C3E200FD2AF8 /* Assets.xcassets */,
 				1E7C9AFD2571C3E200FD2AF8 /* LaunchScreen.storyboard */,
@@ -157,7 +163,9 @@
 			files = (
 				1E35FF5225722C3E000F2561 /* ZagWebViewController.swift in Sources */,
 				1E7C9AF42571C3DE00FD2AF8 /* HomeViewController.swift in Sources */,
+				1EF27545258B248B0029193A /* DiningViewController.swift in Sources */,
 				11FF54D0257707400086A3E2 /* CampusMapViewController.swift in Sources */,
+				1EF27541258B217C0029193A /* NewsViewController.swift in Sources */,
 				1E35FF4F25722C31000F2561 /* EmailViewController.swift in Sources */,
 				1E7C9AF02571C3DE00FD2AF8 /* AppDelegate.swift in Sources */,
 				1E7C9AF22571C3DE00FD2AF8 /* SceneDelegate.swift in Sources */,
