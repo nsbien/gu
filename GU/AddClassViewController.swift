@@ -10,12 +10,13 @@ import UIKit
 class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UINavigationControllerDelegate {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     @IBOutlet var courseName: UILabel!
     @IBAction func inputCourseName(_ sender: Any) {
     }
     @IBOutlet var startTime: UILabel!
-    @IBAction func inputStartPicker(_ sender: Any) {
+    @IBAction func inputStartPicker(_ sender: UIDatePicker) {
+        var selectedDate = sender.date
+        print(selectedDate)
     }
     @IBOutlet weak var endTIme: UILabel!
     @IBAction func inputEndPicker(_ sender: Any) {
@@ -25,6 +26,73 @@ class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     var selectedLocation: String?
     var locationsPicker: [String] = ["College Hall", "Coughlin Hall", "Crosby Center", "Foley Library", "Herek Center", "Humanities Building", "Human Physiology", "Hughes Hall", "Journalism/Broadcast Integrated Media", "Jepson Center", "Jundt Art Center & Museum", "Law School", "Magnuson Theatre (Performing Arts)", "Martin Centre (Rudolf Fitness)", "McCarthey Athletic Center", "Music Building (Monaghan Mansion)", "Music Hall", "Music Annex", "PACCAR Center (Applied Science", "Peerless Building (Human Physiology/Theatre Annex)", "Rosauer Center (Education)", "Tilford Center", "Theatre/Dance Studios", "Myrtle Woldson Performing Arts Center"]
     
+    var weekdays: [Int] = []
+    var isCheckedMon = false
+    var isCheckedTue = false
+    var isCheckedWed = false
+    var isCheckedThu = false
+    var isCheckedFri = false
+    
+    @IBOutlet weak var mondayOutlet: UIButton!
+    @IBAction func monday(_ sender: Any){
+        if isCheckedMon == false {
+            mondayOutlet.setImage(UIImage(named: "checked.png"), for: .normal)
+            isCheckedMon = true
+            weekdays.append(1)
+        } else {
+            mondayOutlet.setImage(UIImage(named: "box.png"), for: .normal)
+            isCheckedMon = false
+            weekdays = weekdays.filter {$0 != 1}
+        }
+    }
+    @IBOutlet var tuesdayOutlet: UIButton!
+    @IBAction func tuesday(_ sender: Any) {
+        if isCheckedTue == false {
+            tuesdayOutlet.setImage(UIImage(named: "checked.png"), for: .normal)
+            isCheckedTue = true
+            weekdays.append(2)
+        } else {
+            tuesdayOutlet.setImage(UIImage(named: "box.png"), for: .normal)
+            isCheckedTue = false
+            weekdays = weekdays.filter {$0 != 2}
+        }
+    }
+    @IBOutlet var wednesdayOutlet: UIButton!
+    @IBAction func wednesday(_ sender: Any) {
+        if isCheckedWed == false {
+            wednesdayOutlet.setImage(UIImage(named: "checked.png"), for: .normal)
+            isCheckedWed = true
+            weekdays.append(3)
+        } else {
+            wednesdayOutlet.setImage(UIImage(named: "box.png"), for: .normal)
+            isCheckedWed = false
+            weekdays = weekdays.filter {$0 != 3}
+        }
+    }
+    @IBOutlet var thursdayOutlet: UIButton!
+    @IBAction func thursday(_ sender: Any) {
+        if isCheckedThu == false {
+            thursdayOutlet.setImage(UIImage(named: "checked.png"), for: .normal)
+            isCheckedThu = true
+            weekdays.append(4)
+        } else {
+            thursdayOutlet.setImage(UIImage(named: "box.png"), for: .normal)
+            isCheckedThu = false
+            weekdays = weekdays.filter {$0 != 4}
+        }
+    }
+    @IBOutlet var fridayOutlet: UIButton!
+    @IBAction func friday(_ sender: Any) {
+        if isCheckedFri == false {
+            fridayOutlet.setImage(UIImage(named: "checked.png"), for: .normal)
+            isCheckedFri = true
+            weekdays.append(5)
+        } else {
+            fridayOutlet.setImage(UIImage(named: "box.png"), for: .normal)
+            isCheckedFri = false
+            weekdays = weekdays.filter {$0 != 5}
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,22 +115,31 @@ class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerVie
                 }
              }
          }
-        //for _ in classList {
-        //temp date
-        let date = Date(timeIntervalSinceNow: 5)
-        let content = UNMutableNotificationContent()
-        content.title = "Don't forget"
-        content.body = "Buy some milk"
-        content.sound = UNNotificationSound.default
-        let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute, .second], from: date)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
-        let identifier = "UYLLocalNotification"
-        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        center.add(request, withCompletionHandler: { (error) in
-            if error != nil {
-                print("error")
-            }
-        })
+//        for days in weekdays {
+//            var components = DateComponents()
+//            components.hour = hour
+//            components.minute = minute
+//            components.weekday = days
+//            components.weekdayOrdinal = 10
+//            components.timeZone = .current
+//            let calendar = Calendar(identifier: .gregorian)
+//            let date = date(from: components)!
+//
+//            let date = Date(timeIntervalSinceNow: 5)
+//            let content = UNMutableNotificationContent()
+//            content.title = "Don't forget"
+//            content.body = "Buy some milk"
+//            content.sound = UNNotificationSound.default
+//            let triggerWeekly = Calendar.current.dateComponents([.weekday, .hour, .minute, .second], from: date)
+//            let trigger = UNCalendarNotificationTrigger(dateMatching: triggerWeekly, repeats: true)
+//            let identifier = "UYLLocalNotification"
+//            let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+//            center.add(request, withCompletionHandler: { (error) in
+//                if error != nil {
+//                    print("error")
+//                }
+//            })
+//        }
     }
     
     
@@ -80,6 +157,7 @@ class AddClassViewController: UIViewController, UITextFieldDelegate, UIPickerVie
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedLocation = locationsPicker[row]
+        locationInput.text = selectedLocation
     }
     
     func createPickerView() {

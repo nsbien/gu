@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RrO-43-NlH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RrO-43-NlH">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -295,8 +294,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Campus-Map-CURRENT" translatesAutoresizingMaskIntoConstraints="NO" id="mSY-Bz-anw">
-                                <rect key="frame" x="16" y="56" width="343" height="591"/>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Campus-Map-CURRENT" translatesAutoresizingMaskIntoConstraints="NO" id="mSY-Bz-anw">
+                                <rect key="frame" x="16" y="60" width="343" height="591"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="PJT-nS-vZg" appends="YES" id="6vX-nl-iSw"/>
@@ -428,7 +427,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" axis="vertical" distribution="fillProportionally" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="bpj-Zw-OKx">
-                                <rect key="frame" x="16" y="60" width="343" height="473.5"/>
+                                <rect key="frame" x="16" y="60" width="343" height="486.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgj-BN-f34">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -540,59 +539,80 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Rdj-aC-Sk2">
-                                        <rect key="frame" x="0.0" y="453.5" width="343" height="20"/>
+                                        <rect key="frame" x="0.0" y="453.5" width="343" height="33"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="etW-sM-10E">
-                                                <rect key="frame" x="0.0" y="1" width="68.5" height="17.5"/>
-                                                <imageReference key="image" image="square" catalog="system" symbolScale="default"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FPC-us-xlr">
-                                                <rect key="frame" x="68.5" y="1" width="68.5" height="17.5"/>
-                                                <imageReference key="image" image="square" catalog="system" symbolScale="default"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3c0-EO-zta">
-                                                <rect key="frame" x="137" y="1" width="69" height="17.5"/>
-                                                <imageReference key="image" image="square" catalog="system" symbolScale="default"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kZv-zd-JwL">
-                                                <rect key="frame" x="206" y="1" width="68.5" height="17.5"/>
-                                                <imageReference key="image" image="square" catalog="system" symbolScale="default"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Omz-i2-4y9">
-                                                <rect key="frame" x="274.5" y="1" width="68.5" height="17.5"/>
-                                                <imageReference key="image" image="square" catalog="system" symbolScale="default"/>
-                                            </imageView>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXo-YM-m2I">
+                                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="33"/>
+                                                <state key="normal" title="Button" image="box"/>
+                                                <connections>
+                                                    <action selector="monday:" destination="Gi7-zh-eJC" eventType="touchUpInside" id="UOP-4L-sC1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kI-cN-UFd">
+                                                <rect key="frame" x="68.5" y="0.0" width="68.5" height="33"/>
+                                                <state key="normal" title="Button" image="box"/>
+                                                <connections>
+                                                    <action selector="tuesday:" destination="Gi7-zh-eJC" eventType="touchUpInside" id="96E-TA-IYi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIR-3O-BlR">
+                                                <rect key="frame" x="137" y="0.0" width="69" height="33"/>
+                                                <state key="normal" title="Button" image="box"/>
+                                                <connections>
+                                                    <action selector="wednesday:" destination="Gi7-zh-eJC" eventType="touchUpInside" id="BeN-94-CAl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIH-dy-uG6">
+                                                <rect key="frame" x="206" y="0.0" width="68.5" height="33"/>
+                                                <state key="normal" title="Button" image="box"/>
+                                                <connections>
+                                                    <action selector="thursday:" destination="Gi7-zh-eJC" eventType="touchUpInside" id="DHN-fW-weP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I53-dX-R3o">
+                                                <rect key="frame" x="274.5" y="0.0" width="68.5" height="33"/>
+                                                <state key="normal" title="Button" image="box"/>
+                                                <connections>
+                                                    <action selector="friday:" destination="Gi7-zh-eJC" eventType="touchUpInside" id="56O-Lj-yv4"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vjz-dR-mgP">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0k2-z6-Hat">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Item" image="plus" catalog="system" id="IZj-gD-eIv">
-                                        <color key="tintColor" red="0.322265625" green="0.55733625860000002" blue="0.65071168660000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <barButtonItem title="Save" id="ebG-F1-pp4">
+                                        <connections>
+                                            <action selector="addButtonPressed" destination="Gi7-zh-eJC" id="8q0-po-qXv"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qAt-DZ-6ee"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bpj-Zw-OKx" firstAttribute="top" secondItem="qAt-DZ-6ee" secondAttribute="top" constant="16" id="1ga-qL-UdV"/>
-                            <constraint firstItem="qAt-DZ-6ee" firstAttribute="bottom" secondItem="vjz-dR-mgP" secondAttribute="bottom" id="KwK-UF-4YD"/>
                             <constraint firstItem="bpj-Zw-OKx" firstAttribute="leading" secondItem="qAt-DZ-6ee" secondAttribute="leading" constant="16" id="SYQ-6K-KsJ"/>
-                            <constraint firstItem="vjz-dR-mgP" firstAttribute="trailing" secondItem="qAt-DZ-6ee" secondAttribute="trailing" id="dgO-Xr-hAj"/>
                             <constraint firstItem="qAt-DZ-6ee" firstAttribute="trailing" secondItem="bpj-Zw-OKx" secondAttribute="trailing" constant="16" id="exS-8R-GOh"/>
-                            <constraint firstItem="vjz-dR-mgP" firstAttribute="leading" secondItem="qAt-DZ-6ee" secondAttribute="leading" id="vhQ-Fj-JGd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Classes" id="vaz-9v-ZPH"/>
                     <connections>
                         <outlet property="courseName" destination="Bgj-BN-f34" id="oq0-RB-4rU"/>
                         <outlet property="endTIme" destination="qPa-aK-5vr" id="teP-UE-UNw"/>
+                        <outlet property="fridayOutlet" destination="I53-dX-R3o" id="FE6-lF-DWc"/>
                         <outlet property="location" destination="p40-gg-A7p" id="dqB-Sr-uVD"/>
                         <outlet property="locationInput" destination="NVf-cr-lNP" id="bef-KU-WWu"/>
+                        <outlet property="mondayOutlet" destination="hXo-YM-m2I" id="eHy-6a-uJk"/>
                         <outlet property="startTime" destination="m4U-GH-bmQ" id="IM7-eX-sdk"/>
+                        <outlet property="thursdayOutlet" destination="lIH-dy-uG6" id="XiH-Lc-qJU"/>
+                        <outlet property="tuesdayOutlet" destination="9kI-cN-UFd" id="5Qd-G1-fON"/>
+                        <outlet property="wednesdayOutlet" destination="UIR-3O-BlR" id="EBH-Lg-8FH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJb-i1-mPd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -610,12 +630,11 @@
         <image name="Dark Pencil Icon" width="500" height="500"/>
         <image name="Dark ZagWeb Icon" width="500" height="500"/>
         <image name="Zags" width="500" height="500"/>
+        <image name="box" width="33" height="33"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="gonzaga" width="436" height="100"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="square" catalog="system" width="128" height="114"/>
         <image name="thermometer.sun.fill" catalog="system" width="114" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
