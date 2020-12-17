@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112268AF258ABE38006F5D16 /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112268AE258ABE38006F5D16 /* SportsViewController.swift */; };
 		1160F4D125785ACE00AF829B /* Class+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160F4CF25785ACE00AF829B /* Class+CoreDataClass.swift */; };
 		1160F4D225785ACE00AF829B /* Class+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160F4D025785ACE00AF829B /* Class+CoreDataProperties.swift */; };
 		1160F4D825785CB600AF829B /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1160F4D725785CB600AF829B /* ClassTableViewCell.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		112268AE258ABE38006F5D16 /* SportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsViewController.swift; sourceTree = "<group>"; };
 		1160F4CB257859EB00AF829B /* ClassDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClassDataModel.xcdatamodel; sourceTree = "<group>"; };
 		1160F4CF25785ACE00AF829B /* Class+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Class+CoreDataClass.swift"; path = "../Class+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1160F4D025785ACE00AF829B /* Class+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Class+CoreDataProperties.swift"; path = "../Class+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -83,8 +85,8 @@
 				1E35FF4B257201A7000F2561 /* BlackBoardViewController.swift */,
 				1E35FF5125722C3E000F2561 /* ZagWebViewController.swift */,
 				1E35FF4E25722C31000F2561 /* EmailViewController.swift */,
-				1E35FF5425722C50000F2561 /* AddClassViewController.swift */,
 				1E7C9AF52571C3DE00FD2AF8 /* Main.storyboard */,
+				1E35FF5425722C50000F2561 /* AddClassViewController.swift */,
 				1E7C9AFB2571C3E200FD2AF8 /* Assets.xcassets */,
 				1E7C9AFD2571C3E200FD2AF8 /* LaunchScreen.storyboard */,
 				1E7C9B002571C3E200FD2AF8 /* Info.plist */,
@@ -92,6 +94,7 @@
 				1160F4CA257859EB00AF829B /* ClassDataModel.xcdatamodeld */,
 				11FF54D22577075B0086A3E2 /* ViewClassesViewController.swift */,
 				1160F4D725785CB600AF829B /* ClassTableViewCell.swift */,
+				112268AE258ABE38006F5D16 /* SportsViewController.swift */,
 			);
 			path = GU;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				1E35FF4C257201A7000F2561 /* BlackBoardViewController.swift in Sources */,
 				1160F4D225785ACE00AF829B /* Class+CoreDataProperties.swift in Sources */,
 				11FF54D32577075B0086A3E2 /* ViewClassesViewController.swift in Sources */,
+				112268AF258ABE38006F5D16 /* SportsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
